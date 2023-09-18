@@ -15,7 +15,7 @@ jobs:
       - name: Check the current branch name
         shell: bash
         run: |
-          bash ${GITHUB_ACTION_PATH}/scripts/validate_branch.sh "$CURRENT_BRANCH"
+          bash scripts/validate_branch.sh "$CURRENT_BRANCH"
         env:
           CURRENT_BRANCH: ${{ github.head_ref }}
 
@@ -25,6 +25,6 @@ jobs:
       - name: Check README.md file
         shell: bash
         run: |
-          bash ${GITHUB_ACTION_PATH}/scripts/validate_file.sh "$FILE_NAME"
+          bash scripts/validate_file.sh "$FILE_NAME"
         env:
           FILE_NAME: README.md
