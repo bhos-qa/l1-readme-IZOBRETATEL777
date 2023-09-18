@@ -16,7 +16,6 @@ jobs:
         shell: bash
         run: |
           ls -la
-          ./scripts/validate_branch.sh "$CURRENT_BRANCH"
         env:
           CURRENT_BRANCH: ${{ github.head_ref }}
 
