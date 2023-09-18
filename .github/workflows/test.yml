@@ -16,7 +16,7 @@ jobs:
         shell: bash
         run: |
           ls -la
-          bash scripts/validate_branch.sh "$CURRENT_BRANCH"
+          ./scripts/validate_branch.sh "$CURRENT_BRANCH"
         env:
           CURRENT_BRANCH: ${{ github.head_ref }}
 
@@ -26,6 +26,6 @@ jobs:
       - name: Check README.md file
         shell: bash
         run: |
-          bash scripts/validate_file.sh "$FILE_NAME"
+          ./scripts/validate_file.sh "$FILE_NAME"
         env:
           FILE_NAME: README.md
